@@ -1,0 +1,3 @@
+- apt: update_cache=yes
+- get_url: url=http://vestacp.com/pub/vst-install-debian.sh dest=/tmp mode=0700
+- command: /tmp/vst-install-debian.sh --nginx no --exim no --dovecot no --interactive no --hostname {{ inventory_hostname }} --email {{ vesta_email}} --password {{ vesta_password }} --force
